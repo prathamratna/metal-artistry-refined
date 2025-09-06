@@ -77,28 +77,28 @@ const Services = () => {
         <div className="relative rounded-2xl overflow-hidden">
           <img src={productsImage} alt="Various metal cans and containers showcase" className="w-full h-64 md:h-80 object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-secondary/90 to-industrial-dark/80 flex items-center">
-            <div className="container-width px-8 py-[32px]">
-              <div className="max-w-2xl">
-                <h3 className="text-2xl md:text-4xl font-bold text-white mb-4">
+            <div className="container-width px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-[32px]">
+              <div className="max-w-full sm:max-w-2xl">
+                <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-3 sm:mb-4">
                   Customized Size and Shape
                 </h3>
-                <p className="text-white/90 text-lg mb-6 leading-relaxed">
+                <p className="text-white/90 text-sm sm:text-base lg:text-lg mb-4 sm:mb-6 leading-relaxed">
                   We specialize in crafting metal cans tailored to your exact specifications. 
                   From unique shapes to custom sizes, we ensure your product stands out while 
                   maintaining optimal protection.
                 </p>
-                <div className="flex space-x-4">
+                <div className="grid grid-cols-3 gap-2 sm:gap-4">
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-primary-glow">500+</div>
-                    <div className="text-white/80 text-sm">Designs Created</div>
+                    <div className="text-lg sm:text-2xl lg:text-3xl font-bold text-primary-glow">500+</div>
+                    <div className="text-white/80 text-xs sm:text-sm">Designs Created</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-primary-glow">50+</div>
-                    <div className="text-white/80 text-sm">Industries Served</div>
+                    <div className="text-lg sm:text-2xl lg:text-3xl font-bold text-primary-glow">50+</div>
+                    <div className="text-white/80 text-xs sm:text-sm">Industries Served</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-primary-glow">99%</div>
-                    <div className="text-white/80 text-sm">Quality Rate</div>
+                    <div className="text-lg sm:text-2xl lg:text-3xl font-bold text-primary-glow">99%</div>
+                    <div className="text-white/80 text-xs sm:text-sm">Quality Rate</div>
                   </div>
                 </div>
               </div>
