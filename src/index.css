@@ -176,10 +176,25 @@ All colors MUST be HSL.
   }
 
   .section-padding {
-    @apply px-4 sm:px-6 lg:px-8 py-16 lg:py-24;
+    @apply px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24;
   }
 
   .container-width {
     @apply max-w-7xl mx-auto;
+  }
+
+  /* Video optimization for mobile */
+  video {
+    object-fit: cover;
+    object-position: center;
+  }
+
+  /* Enhanced responsive utilities */
+  .responsive-text-hero {
+    @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl;
+  }
+
+  .responsive-padding {
+    @apply px-4 sm:px-6 lg:px-8;
   }
 }
