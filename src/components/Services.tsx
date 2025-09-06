@@ -1,49 +1,39 @@
 import { Settings, Shield, Truck, Zap, Users, Award } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import productsImage from '@/assets/products-showcase.jpg';
-
 const Services = () => {
-  const services = [
-    {
-      icon: Settings,
-      title: "Custom Can Solutions",
-      description: "Tailored metal cans designed precisely to meet your unique product requirements. Ensuring perfect fit and protection for your products.",
-      features: ["Bespoke sizing", "Custom shapes", "Brand integration"]
-    },
-    {
-      icon: Shield,
-      title: "Quality Assurance",
-      description: "Stringent quality checks at every stage, ensuring durable, reliable, and compliant metal packaging solutions always.",
-      features: ["ISO certification", "Multi-stage testing", "100% inspection"]
-    },
-    {
-      icon: Zap,
-      title: "High Volume Production",
-      description: "Efficient manufacturing processes capable of handling large orders while maintaining consistent quality standards.",
-      features: ["2M+ monthly capacity", "Fast turnaround", "Scalable production"]
-    },
-    {
-      icon: Truck,
-      title: "Reliable Delivery",
-      description: "Timely delivery across India with secure packaging and tracking. Your orders reach you safely and on schedule.",
-      features: ["Pan-India delivery", "Secure packaging", "Real-time tracking"]
-    },
-    {
-      icon: Users,
-      title: "Expert Support",
-      description: "Dedicated team of packaging experts ready to assist with technical guidance and customer support.",
-      features: ["24/7 support", "Technical consultation", "After-sales service"]
-    },
-    {
-      icon: Award,
-      title: "Industry Leadership",
-      description: "25+ years of industry experience with recognition for innovation and excellence in metal packaging solutions.",
-      features: ["Industry awards", "Innovation focus", "Proven track record"]
-    }
-  ];
-
-  return (
-    <section id="products" className="section-padding bg-gradient-to-br from-accent to-muted">
+  const services = [{
+    icon: Settings,
+    title: "Custom Can Solutions",
+    description: "Tailored metal cans designed precisely to meet your unique product requirements. Ensuring perfect fit and protection for your products.",
+    features: ["Bespoke sizing", "Custom shapes", "Brand integration"]
+  }, {
+    icon: Shield,
+    title: "Quality Assurance",
+    description: "Stringent quality checks at every stage, ensuring durable, reliable, and compliant metal packaging solutions always.",
+    features: ["ISO certification", "Multi-stage testing", "100% inspection"]
+  }, {
+    icon: Zap,
+    title: "High Volume Production",
+    description: "Efficient manufacturing processes capable of handling large orders while maintaining consistent quality standards.",
+    features: ["2M+ monthly capacity", "Fast turnaround", "Scalable production"]
+  }, {
+    icon: Truck,
+    title: "Reliable Delivery",
+    description: "Timely delivery across India with secure packaging and tracking. Your orders reach you safely and on schedule.",
+    features: ["Pan-India delivery", "Secure packaging", "Real-time tracking"]
+  }, {
+    icon: Users,
+    title: "Expert Support",
+    description: "Dedicated team of packaging experts ready to assist with technical guidance and customer support.",
+    features: ["24/7 support", "Technical consultation", "After-sales service"]
+  }, {
+    icon: Award,
+    title: "Industry Leadership",
+    description: "25+ years of industry experience with recognition for innovation and excellence in metal packaging solutions.",
+    features: ["Industry awards", "Innovation focus", "Proven track record"]
+  }];
+  return <section id="products" className="section-padding bg-gradient-to-br from-accent to-muted">
       <div className="container-width">
         {/* Header */}
         <div className="text-center mb-16">
@@ -59,11 +49,7 @@ const Services = () => {
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {services.map((service, index) => (
-            <Card 
-              key={index} 
-              className="group hover:shadow-industrial hover:scale-105 transition-all duration-500 border-none bg-card/80 backdrop-blur-sm"
-            >
+          {services.map((service, index) => <Card key={index} className="group hover:shadow-industrial hover:scale-105 transition-all duration-500 border-none bg-card/80 backdrop-blur-sm">
               <CardContent className="p-8">
                 <div className="mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary-glow rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -78,27 +64,20 @@ const Services = () => {
                 </div>
                 
                 <div className="space-y-2">
-                  {service.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-center space-x-2">
+                  {service.features.map((feature, featureIndex) => <div key={featureIndex} className="flex items-center space-x-2">
                       <div className="w-2 h-2 bg-primary rounded-full"></div>
                       <span className="text-sm text-muted-foreground">{feature}</span>
-                    </div>
-                  ))}
+                    </div>)}
                 </div>
               </CardContent>
-            </Card>
-          ))}
+            </Card>)}
         </div>
 
         {/* Product Showcase */}
         <div className="relative rounded-2xl overflow-hidden">
-          <img 
-            src={productsImage} 
-            alt="Various metal cans and containers showcase" 
-            className="w-full h-64 md:h-80 object-cover"
-          />
+          <img src={productsImage} alt="Various metal cans and containers showcase" className="w-full h-64 md:h-80 object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-secondary/90 to-industrial-dark/80 flex items-center">
-            <div className="container-width px-8">
+            <div className="container-width px-8 py-[32px]">
               <div className="max-w-2xl">
                 <h3 className="text-2xl md:text-4xl font-bold text-white mb-4">
                   Customized Size and Shape
@@ -127,8 +106,6 @@ const Services = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Services;
