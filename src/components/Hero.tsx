@@ -100,12 +100,6 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Scroll Indicator - Responsive positioning */}
-      <div className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-5 sm:w-6 h-8 sm:h-10 border-2 border-white/50 rounded-full flex justify-center">
-          <div className="w-0.5 sm:w-1 h-2 sm:h-3 bg-white/70 rounded-full mt-1.5 sm:mt-2 animate-pulse"></div>
-        </div>
-      </div>
     </section>;
 };
 export default Hero;
