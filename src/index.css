@@ -175,6 +175,15 @@ All colors MUST be HSL.
     to { box-shadow: var(--shadow-premium); }
   }
 
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  .animate-scroll {
+    animation: scroll 20s linear infinite;
+  }
+
   .section-padding {
     @apply px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24;
   }

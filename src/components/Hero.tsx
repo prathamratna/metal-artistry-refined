@@ -87,14 +87,25 @@ const Hero = () => {
             
           </div>
 
-          {/* Trust Indicators - Responsive */}
+          {/* Trust Indicators - Infinite Scroll */}
           <div className="pt-6 sm:pt-8 border-t border-white/20">
             <p className="text-white/70 text-xs sm:text-sm mb-3 sm:mb-4">Trusted by Industry Leaders</p>
-            <div className="flex justify-center items-center space-x-4 sm:space-x-8 opacity-60">
-              <div className="w-12 sm:w-16 lg:w-20 h-6 sm:h-8 bg-white/20 rounded animate-pulse"></div>
-              <div className="w-12 sm:w-16 lg:w-20 h-6 sm:h-8 bg-white/20 rounded animate-pulse"></div>
-              <div className="w-12 sm:w-16 lg:w-20 h-6 sm:h-8 bg-white/20 rounded animate-pulse"></div>
-              <div className="hidden sm:block w-16 lg:w-20 h-6 sm:h-8 bg-white/20 rounded animate-pulse"></div>
+            <div className="overflow-hidden">
+              <div className="flex animate-scroll space-x-6 sm:space-x-8">
+                <div className="w-16 sm:w-20 lg:w-24 h-6 sm:h-8 bg-white/20 rounded opacity-60 flex-shrink-0"></div>
+                <div className="w-16 sm:w-20 lg:w-24 h-6 sm:h-8 bg-white/20 rounded opacity-60 flex-shrink-0"></div>
+                <div className="w-16 sm:w-20 lg:w-24 h-6 sm:h-8 bg-white/20 rounded opacity-60 flex-shrink-0"></div>
+                <div className="w-16 sm:w-20 lg:w-24 h-6 sm:h-8 bg-white/20 rounded opacity-60 flex-shrink-0"></div>
+                <div className="w-16 sm:w-20 lg:w-24 h-6 sm:h-8 bg-white/20 rounded opacity-60 flex-shrink-0"></div>
+                <div className="w-16 sm:w-20 lg:w-24 h-6 sm:h-8 bg-white/20 rounded opacity-60 flex-shrink-0"></div>
+                {/* Duplicate set for seamless loop */}
+                <div className="w-16 sm:w-20 lg:w-24 h-6 sm:h-8 bg-white/20 rounded opacity-60 flex-shrink-0"></div>
+                <div className="w-16 sm:w-20 lg:w-24 h-6 sm:h-8 bg-white/20 rounded opacity-60 flex-shrink-0"></div>
+                <div className="w-16 sm:w-20 lg:w-24 h-6 sm:h-8 bg-white/20 rounded opacity-60 flex-shrink-0"></div>
+                <div className="w-16 sm:w-20 lg:w-24 h-6 sm:h-8 bg-white/20 rounded opacity-60 flex-shrink-0"></div>
+                <div className="w-16 sm:w-20 lg:w-24 h-6 sm:h-8 bg-white/20 rounded opacity-60 flex-shrink-0"></div>
+                <div className="w-16 sm:w-20 lg:w-24 h-6 sm:h-8 bg-white/20 rounded opacity-60 flex-shrink-0"></div>
+              </div>
             </div>
           </div>
         </div>
