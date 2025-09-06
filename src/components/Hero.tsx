@@ -2,33 +2,24 @@ import { ArrowRight, CheckCircle, Star, Play } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import heroImage from '@/assets/hero-manufacturing.jpg';
-
 const Hero = () => {
-  const achievements = [
-    { icon: CheckCircle, text: "25+ Years Experience" },
-    { icon: CheckCircle, text: "2M+ Monthly Capacity" },
-    { icon: CheckCircle, text: "ISO Certified Quality" },
-  ];
-
-  return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+  const achievements = [{
+    icon: CheckCircle,
+    text: "25+ Years Experience"
+  }, {
+    icon: CheckCircle,
+    text: "2M+ Monthly Capacity"
+  }, {
+    icon: CheckCircle,
+    text: "ISO Certified Quality"
+  }];
+  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Video Background with Fallback */}
       <div className="absolute inset-0">
-        <video 
-          autoPlay 
-          muted 
-          loop 
-          playsInline
-          className="w-full h-full object-cover"
-          poster={heroImage}
-        >
+        <video autoPlay muted loop playsInline className="w-full h-full object-cover" poster={heroImage}>
           <source src="https://cdn.pixabay.com/vimeo/431235989/industrial-factory.mp4?width=1920&hash=ad5f2e5c4bd2d7e3c24c6e80c8b8c4d2e8f9b1c3" type="video/mp4" />
           {/* Fallback image if video doesn't load */}
-          <img 
-            src={heroImage} 
-            alt="Modern metal can manufacturing facility" 
-            className="w-full h-full object-cover"
-          />
+          <img src={heroImage} alt="Modern metal can manufacturing facility" className="w-full h-full object-cover" />
         </video>
         <div className="absolute inset-0 hero-gradient"></div>
       </div>
@@ -43,7 +34,9 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="hidden lg:block absolute bottom-16 left-4 xl:left-10 animate-float" style={{ animationDelay: '2s' }}>
+      <div className="hidden lg:block absolute bottom-16 left-4 xl:left-10 animate-float" style={{
+      animationDelay: '2s'
+    }}>
         <div className="glass-card p-3 xl:p-4 rounded-xl">
           <div className="text-white">
             <div className="text-xl xl:text-2xl font-bold">2M+</div>
@@ -54,7 +47,7 @@ const Hero = () => {
 
       {/* Main Content - Perfectly Centered and Responsive */}
       <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-4xl mx-auto text-center py-[100px]">
           {/* Badge */}
           <div className="mb-4 sm:mb-6">
             <Badge variant="secondary" className="px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-medium bg-white/10 text-white border-white/20">
@@ -79,15 +72,10 @@ const Hero = () => {
 
           {/* Achievement Badges - Responsive Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-4 mb-6 sm:mb-10 max-w-2xl mx-auto">
-            {achievements.map((achievement, index) => (
-              <div 
-                key={index}
-                className="glass-card px-3 sm:px-4 py-2 rounded-full flex items-center justify-center space-x-2"
-              >
+            {achievements.map((achievement, index) => <div key={index} className="glass-card px-3 sm:px-4 py-2 rounded-full flex items-center justify-center space-x-2">
                 <achievement.icon className="w-3 sm:w-4 h-3 sm:h-4 text-primary-glow flex-shrink-0" />
                 <span className="text-white text-xs sm:text-sm font-medium">{achievement.text}</span>
-              </div>
-            ))}
+              </div>)}
           </div>
 
           {/* Call to Action - Stacked on mobile, side by side on desktop */}
@@ -96,10 +84,7 @@ const Hero = () => {
               Explore Our Products
               <ArrowRight className="w-4 sm:w-5 h-4 sm:h-5 ml-2" />
             </Button>
-            <Button variant="glass" size="xl" className="w-full sm:w-auto">
-              <Play className="w-4 sm:w-5 h-4 sm:h-5 mr-2" />
-              Watch Demo
-            </Button>
+            
           </div>
 
           {/* Trust Indicators - Responsive */}
@@ -121,8 +106,6 @@ const Hero = () => {
           <div className="w-0.5 sm:w-1 h-2 sm:h-3 bg-white/70 rounded-full mt-1.5 sm:mt-2 animate-pulse"></div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
