@@ -33,7 +33,7 @@ const Services = () => {
     description: "25+ years of industry experience with recognition for innovation and excellence in metal packaging solutions.",
     features: ["Industry awards", "Innovation focus", "Proven track record"]
   }];
-  return <section id="products" className="section-padding bg-gradient-to-br from-accent to-muted">
+  return <section id="services" className="section-padding bg-gradient-to-br from-accent to-muted">
       <div className="container-width">
         {/* Header */}
         <div className="text-center mb-16">
